@@ -1,0 +1,20 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block body %}
+<h1>post Detail view</h1>
+
+
+{{ post.p_title }}<br>
+{{ post.p_name }}<br>
+
+
+
+<div class="player">
+    <video controls src="{{ post.p_video.url }}"></video>
+</div>
+
+
+
+
+{% endblock %}

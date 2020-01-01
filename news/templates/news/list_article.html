@@ -1,0 +1,7 @@
+<h1>hello post list view</h1>
+
+{% for instence in object_list %}
+
+    <p> {{ instence.id }}  - <a href="{{ instence.get_absolute_url }}">{{ instence.p_name }}</a>  </p><br>
+
+{% endfor %}
