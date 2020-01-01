@@ -2,7 +2,7 @@
 
 
 {% block body %}
-
+<div class="container">
 <form action="." method="article" enctype="multipart/form-data">{% csrf_token %}
     
     {{ form.media }}
@@ -10,5 +10,5 @@
     
     <input type="submit" value="Submit">
 </form>
-
+</div>
 {% endblock %}

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import CreateView, ListView, DetailView
 from .forms import CategoryForm, ArticleForm, HeadlineForm
+from .models import Article
 
 
 class ArticleCreate(CreateView):
@@ -15,10 +16,10 @@ class ArticleCreate(CreateView):
 
 
 
-# class PostListView(ListView):
-#     model = Post
-#     template_name = 'news/post_list.html'
-#     queryset = Post.objects.all()
+class ArticleList(ListView):
+    model = Article
+    template_name = 'news/list_article.html'
+    queryset = Article.objects.all()
 
 
 
