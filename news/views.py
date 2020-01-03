@@ -5,6 +5,11 @@ from .forms import CategoryForm, ArticleForm, HeadlineForm
 from .models import Article
 
 
+def Index(request):
+    return render(request, 'news/index.html')
+
+
+
 class ArticleCreate(CreateView):
     form_class = ArticleForm
     template_name = 'news/create_article.html'

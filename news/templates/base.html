@@ -1,35 +1,205 @@
-<!doctype html>
-<html lang="en">
 {% load static %}
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    <title>Hello, world!</title>
+<!-- Mirrored from html.dynamiclayers.net/dl/news24/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Dec 2019 15:04:25 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Construction is ultimate responsive construction html template which include 3 homepage demos.">
+    <title>News24 - Responsive News Template</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'news/img/favicon.png' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/themify-icons.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/animate.min.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/elegant-line-icons.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/owl.carousel.min.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/meanmenu.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/swipebox.min.css' %}">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/main.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'news/css/responsive.css' %}">
+    <script type="text/javascript" src="{% static 'news/js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
 
 <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id='preloader'>
+        <div class='loader'>
+            <img src="{% static 'news/img/loading.gif' %}" width="200" alt="">
+        </div>
+    </div>
+    <header id="header" class="header sticky-header">
+        <div class="top-header bg-dark">
+            <div class="container">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="ti-mobile"></i> 983 592 88 52</li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-right sm-text-left">
+                    <ul class="top-social">
+                        <li><a href="#"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-twitter"></i></a></li>
+                        <li><a href="#"><i class="ti-google"></i></a></li>
+                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        <li><a href="#"><i class="ti-instagram"></i></a></li>
+                        <li class="fz-13">Thousday July 4 , 2017</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mid-header">
+            <div class="container">
+                <div class="site-branding full-left">
+                    <a href="#"><img src="{% static 'news/img/logo.jpg' %}" alt="News24"></a>
+                </div>
+                <div class="banner pull-right">
+                    <a href="#"><img src="{% static 'news/img/banner.jpg' %}" alt="News24 Banner"></a>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu-wrap bg-red">
+            <div class="container">
+                <div class="col-md-9 col-xs-6">
+                    <div class="menu-wrap mean-menu">
+                        <nav class="mainmenu">
+                            <ul id="navi-menu">
+                                <li class="current_page_item"><a href="{% url 'index' %}">Home</a>
+                                    <ul>
+                                        <li><a href="#">Home Right Sidebar</a></li>
+                                        <li><a href="#">Home Left Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Entertainment</a></li>
+                                <li><a href="#">World</a></li>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Page</a>
+                                    <ul>
+                                        <li><a href="#">News Single</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <form action="#" class="search-form">
+                        <input type="text" placeholder="Search news..">
+                        <button class="submit" type="submit"><i class="ti-search"></i></button>
+                    </form>
+                </div>
+                <div class="mobile-menu"></div>
+            </div>
+        </div>
+    </header>
     {% block body %}
     
     {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{% static 'main.js'%}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+    <footer class="footer-wrapper bg-dark">
+        <div class="footer-widgets padding">
+            <div class="container">
+                <div class="col-md-4 col-xs-6 sm-padding">
+                    <div class="single-widget">
+                        <a href="#" class="footer-logo"><img src="{% static 'news/img/logo-light.png' %}" alt="News24"></a>
+                        <p class="text-light no-margin">News24 is a Clean Responsive HTML News-paper, Magazine, News and
+                            Blog template. with good feature that allow you to completely customize your website to your
+                            needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6 sm-padding">
+                    <div class="single-widget">
+                        <h3>Most Viwed</h3>
+                        <div class="footer-posts">
+                            <div class="footer-post">
+                                <span class="date">Oct 28, 2016</span>
+                                <h4><a href="#">Success is not a good teacher failure makes you humble</a></h4>
+                            </div>
+                            <div class="footer-post">
+                                <span class="date">Oct 28, 2016</span>
+                                <h4><a href="#">Success is not a good teacher failure makes you humble</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 sm-padding">
+                    <div class="single-widget">
+                        <h3>Most Viwed</h3>
+                        <ul class="tag-list">
+                            <li><a href="#">Worlds</a></li>
+                            <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Football</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Fasion</a></li>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Western Foods</a></li>
+                            <li><a href="#">Western Foods</a></li>
+                            <li><a href="#">Race</a></li>
+                            <li><a href="#">Football</a></li>
+                            <li><a href="#">Foods</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright ptb-40">
+            <div class="container">
+                <div class="col-xs-6 xs-padding xs-text-center">
+                    <p class="no-margin fz-13 text-light">&copy; Copyright Crackthemes 2017, All Rights Reserved</p>
+                </div>
+                <div class="col-xs-6 xs-padding">
+                    <ul class="footer-social text-right xs-text-center">
+                        <li><a href="#"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-twitter"></i></a></li>
+                        <li><a href="#"><i class="ti-google"></i></a></li>
+                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        <li><a href="#"><i class="ti-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
+    
+    <script src="{% static 'news/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/waypoints.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/smooth-scroll.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/jquery.swipebox.min.js' %}"></script>
+    <script src="{% static 'news/js/vendor/jquery.newsTicker.min.js' %}"></script>
+    <script src="{% static 'news/js/main.js' %}"></script>
+    </body>
+    
+    <!-- Mirrored from html.dynamiclayers.net/dl/news24/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Dec 2019 15:06:15 GMT -->
+    
+    </html>
