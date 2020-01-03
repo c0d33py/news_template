@@ -1,11 +1,13 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
+from embed_video.fields import EmbedVideoField
 from django.db import models
 from django.urls import reverse
 
 class LiveST(models.Model):
     title       = models.CharField(max_length=100)
-    video       = models.URLField(max_length=250)
+    videos       = models.URLField(max_length=250, blank=True)
+    video       = EmbedVideoField(blank=True)  # same like models.URLField()
 
     def __str__(self):
         return self.title

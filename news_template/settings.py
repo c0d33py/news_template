@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'embed_video',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -114,12 +115,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
 ]
-
-
-
-
-
-
 
 
 MEDIA_URL = '/media/'

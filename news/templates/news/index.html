@@ -1,84 +1,44 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load embed_video_tags %}
 {% block body %}
     <section class="main-wrapper mb-40">
         <div class="container">
+            
             <div class="featured-wrap">
                 <div class="col-md-5 col-sm-12">
-                    <div class="post-carousel owl-carousel">
-                        <div class="featured-post" style="background-image: url(img/slider-post-1.jpg);">
-                            <div class="post-info">
-                                <a href="#" class="cat-name tt-u">World</a>
-                                <h3 class="fw-6 fz-16"><a href="#" class="text-white">Michel Brown Talks About American
-                                        People.</a></h3>
-                            </div>
-                        </div>
-                        <div class="featured-post" style="background-image: url(img/slider-post-1.jpg);">
-                            <div class="post-info">
-                                <a href="#" class="cat-name tt-u">World</a>
-                                <h3 class="fw-6 fz-16"><a href="#" class="text-white">Michel Brown Talks About American
-                                        People.</a></h3>
-                            </div>
-                        </div>
-                    </div>
+
+                    <iframe width="720" height="450" src="https://www.youtube.com/embed/Dz6UmueWNbM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+
+                        
+                    <!-- you can just embed -->
+                    {% video item.video 'small' %}
+                    
+                    <!-- or use variables (with embedding, too) -->
+                    {% video item.video as LiveST %}
+                        {% video LiveST.video '640x480' %}
+                    {% endvideo %}
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="post-carousel owl-carousel">
-                        <div class="featured-post" style="background-image: url(img/slider-post-2.jpg);">
-                            <div class="post-info">
-                                <a href="#" class="cat-name tt-u">Sports</a>
-                                <h3 class="fw-6 fz-16"><a href="#" class="text-white">Improve Your Health And Stamina
-                                        With Cycling.</a></h3>
-                            </div>
-                        </div>
-                        <div class="featured-post" style="background-image: url(img/slider-post-2.jpg);">
-                            <div class="post-info">
-                                <a href="#" class="cat-name tt-u">Sports</a>
-                                <h3 class="fw-6 fz-16"><a href="#" class="text-white">Improve Your Health And Stamina
-                                        With Cycling.</a></h3>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+                <!-- <div class="col-md-3 col-sm-6">
+                    
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="top-wrap mb-10">
-                        <div class="post-carousel owl-carousel">
-                            <div class="featured-post" style="background-image: url(img/slider-post-3.jpg);">
-                                <div class="post-info">
-                                    <a href="#" class="cat-name tt-u">World</a>
-                                    <h3 class="fw-6 fz-16"><a href="#" class="text-white">An Army or Ground Force is a
-                                            Fighting Force That Fights Primarily On Land.</a></h3>
-                                </div>
-                            </div>
-                            <div class="featured-post" style="background-image: url(img/slider-post-3.jpg);">
-                                <div class="post-info">
-                                    <a href="#" class="cat-name tt-u">World</a>
-                                    <h3 class="fw-6 fz-16"><a href="#" class="text-white">An Army or Ground Force is a
-                                            Fighting Force That Fights Primarily On Land.</a></h3>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="bottom-wrap">
-                        <div class="post-carousel owl-carousel">
-                            <div class="featured-post" style="background-image: url(img/slider-post-4.jpg);">
-                                <div class="post-info">
-                                    <a href="#" class="cat-name tt-u">World</a>
-                                    <h3 class="fw-6 fz-16"><a href="#" class="text-white">Alex Helis Confirms Mystery
-                                            Pop Singer On New Music Album.</a></h3>
-                                </div>
-                            </div>
-                            <div class="featured-post" style="background-image: url(img/slider-post-4.jpg);">
-                                <div class="post-info">
-                                    <a href="#" class="cat-name tt-u">World</a>
-                                    <h3 class="fw-6 fz-16"><a href="#" class="text-white">Alex Helis Confirms Mystery
-                                            Pop Singer On New Music Album.</a></h3>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="news-ticker-wrap">
+
+            <!-- ticker-title -->
+            <!-- <div class="news-ticker-wrap">
                 <span class="ticker-title tt-u">Breaking News</span>
                 <ul class="news-ticker">
                     <li><a href="#">Michel Brown Talks About American People.</a></li>
@@ -90,7 +50,9 @@
                     <i class="ti-angle-left" id="prev-ticker"></i>
                     <i class="ti-angle-right" id="next-ticker"></i>
                 </div>
-            </div>
+            </div> -->
+
+
             <div class="main-content mt-20 ov-hidden">
                 <div class="col-md-8 sm-padding">
                     <div class="news-block padding-15 bg-white bd-grey mb-40">
